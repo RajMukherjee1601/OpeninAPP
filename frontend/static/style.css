@@ -1,0 +1,114 @@
+/* Center the container vertically on the page */
+html, body {
+    /* height: 400px;
+    width: 400px; */
+    height:100%;
+
+}
+
+body {
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style the navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2A2A2A;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Style for the website name */
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+
+
+/* Style the container */
+.container {
+    /* width:60%;
+    height: 60%; */
+    width:50%;
+    background-color: #2A2A2A;
+    padding: 40px;
+    border-radius: 15px;
+    border:3px solid #5d5b5b;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+.text-center img{
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    height: 25%;
+    width:25%;
+    border: 3px dashed #5d5b5b;
+    border-radius: 100%;
+
+}
+
+.text-center h4{
+    margin: 30px;
+}
+
+/* Style the drag-and-drop area */
+.custom-file-label {
+    cursor: pointer;
+    margin-top: 10%;
+    padding: 5px;
+    background-color: #0095f7;
+    border-radius: 5px;
+    border: 2px solid #008dea;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.custom-file-input{
+    display: none;
+}
+
+
+
+    #translateButton {
+        /* background-image: linear-gradient(to right,  #fc00ff 0%, #00dbde  51%, #fc00ff  100%); */
+        cursor: pointer;
+        background-image: linear-gradient(to right,  #00dbde 0%, #fc00ff  51%, #00dbde  100%);
+        margin-top: 30px;
+        margin-left: 180px;
+        width: 300px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        /* box-shadow: 0 0 20px #eee; */
+        color: white;
+        border-radius: 5px;
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        border: none;
+      }
+
+      #translateButton:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }

@@ -1,0 +1,9 @@
+pydantic
+openai
+pre-commit
+flask
+googletrans==4.0.0rc1
+pypdf2
+sentencepiece
+transformers
+torch

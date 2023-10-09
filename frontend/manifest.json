@@ -1,0 +1,26 @@
+{
+    "name": "Translator",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "/templates/index.html",
+        "default_icon": "/static/images/final.png"
+    },
+    "icons": {
+        "128": "/static/images/final.png"
+    },
+    "permissions": ["activeTab"],
+    "background": {
+        "scripts": ["app.py"],
+        "persistent": false
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+L",
+                "mac": "MacCtrl+Shift+L"
+            },
+            "description": "Open Translator"
+        }
+    }
+}

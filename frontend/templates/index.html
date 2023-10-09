@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Webpage</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="/">TRANSLATOR</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div><h1>TRANSLATOR</h1></div>
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary translateButton" disabled><a href="{{ url_for('text') }}" >Translate Text</a></button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary translateButton" disabled><a href="{{ url_for('files') }}">Translate Files</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (Popper.js and jQuery are required) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+
+    <style>
+        html, body {
+    /* height: 400px;
+    width: 400px; */
+    height:100%;
+}
+
+body {
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* style the navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2A2A2A;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Style for the website name */
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Style the container */
+.container {
+    width:50%;
+    height: 50%;
+    background-color: #2A2A2A;
+    padding: 20px;
+    border-radius: 15px;
+    border:3px solid #5d5b5b;
+    color: white;
+    text-align: center;
+}
+
+.translateButton {
+        /* background-image: linear-gradient(to right,  #fc00ff 0%, #00dbde  51%, #fc00ff  100%); */
+        background-image: linear-gradient(to right,  #00dbde 0%, #fc00ff  51%, #00dbde  100%);
+        margin: 50px;
+        margin-left: 180px;
+        width: 300px;
+        padding: 15px;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        /* box-shadow: 0 0 20px #eee; */
+        border-radius: 5px;
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        border: none;
+      }
+
+      .translateButton:hover {
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+      .translateButton a{
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+
+</body>
+</html>

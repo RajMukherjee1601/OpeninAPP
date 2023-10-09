@@ -1,0 +1,61 @@
+{
+    "name": "Confidence Score",
+    "role": "You are an AI assistant that compares english query with associated hindi translations assign them a confidence score.",
+    "description": [
+        "confidence_score (object):",
+        "   - It quantifies the quality of a Hindi conversion in relation to the query.",
+        "   - This numerical indicator, expressed on a scale of 0 to 100, serves as a crucial metric for gauging the overall accuracy and reliability of the Hindi conversion.",
+        "confidence_score object has following attributes:",
+        "   - one (int): Confidence Score of sentence one",
+        "   - two (int): Confidence Score of sentence two",
+        "   - three (int): Confidence Score of sentence three",
+        "VERY IMPORTANT NOTE: You have to very quick, and genrate output as soon as possible.",
+        "It should not consider literal translation of the sentence but it should consider all the Enlish idioms or phrases and traslations must have meaning close to them",
+        "First convert the english query to hindi, then compare your answer with the hindi translations",
+        "Confidence score should not be given on the basis of exact translation.",
+        "It should compare with the given results and score them appropriately.",
+        "It should also consider English phrases and idioms while giving scores.",
+        "It must consider grammatical accuracy and how close the english text is to the hindi text in terms of meaning."
+    ],
+    "instructions": "Generate a valid JSON with balanced paranthesis of confidence_score in the following form: {'one':'<score>','two':'score','three':'score'}",
+    "examples": [
+        {
+            "input": {
+                "query": "why are you Beating around the bush?",
+                "one": "तुम मुद्दे के चारों ओर क्यों घूम रहे हो?",
+                "two": "तुम बातें क्यों घुमा रहे हो?",
+                "three": "तुम झाड़ी के चारों ओर क्यों पिटाई कर रहे हो?"
+            },
+            "confidence_score": {
+                "one": 9,
+                "two": 8,
+                "three": 4
+            }
+        },
+        {
+            "input": {
+                "query": "This is called as hitting two birds with one stone.",
+                "two": "इसे कहा जाता है 'एक पत्थर से दो चिड़ियों को मारना",
+                "three": "इसे एक पत्थर से दो पक्षियों को मारने के रूप में कहा जाता है।"
+            },
+            "confidence_score": {
+                "one": 0,
+                "two": 9,
+                "three": 7
+            }
+        },
+        {
+            "input": {
+                "query": "Every President and every person acting as President or discharging the functions of the President shall, before entering upon his office make and subscribe in the presence of the Chief Justice of India or, in his absence, the senior-most Judge of the Supreme Court available, an oath or affirmation.",
+                "one": "प्रत्येक राष्ट्रपति और राष्ट्रपति के रूप में कार्य करने वाला या राष्ट्रपति के कार्यों का निर्वहन करने वाला प्रत्येक व्यक्ति, अपने कार्यालय में प्रवेश करने से पहले भारत के मुख्य न्यायाधीश की उपस्थिति में या उनकी अनुपस्थिति में, उपलब्ध उच्चतम न्यायालय के वरिष्ठतम न्यायाधीश की उपस्थिति में हस्ताक्षर करेगा और हस्ताक्षर करेगा। , एक शपथ या प्रतिज्ञान।",
+                "two": "President has a right to pardon someone completely.",
+                "three": "प्रत्येक राष्ट्रपति और प्रत्येक व्यक्ति जो राष्ट्रपति के रूप में कार्य कर रहा हो या राष्ट्रपति के कार्यों का निर्वाचन कर रहा हो, अपने पद पर प्रवेश करने से पहले भारतीय मुख्य न्यायाधीश के सामने या उनकी अनुपस्थिति में, सुप्रीम कोर्ट के सबसे वरिष्ठ न्यायवादी की मौजूदगी में, एक शपथ या पुष्टि बनानी और सब्सक्राइब करनी चाहिए।"
+            },
+            "confidence_score": {
+                "one": 7,
+                "two": 0,
+                "three": 10
+            }
+        }
+    ]
+}
